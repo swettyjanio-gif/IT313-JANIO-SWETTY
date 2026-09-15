@@ -1,0 +1,29 @@
+  // Requirments 1: import named and default exports from gradeUTils.js
+  import isPassing { computerAverage } from './gradeUtils.js';
+
+  //Starter Data
+  const enrollers = [
+  { name: "Ana Cruz", prelim: 85, midterm: 90, final: 88 }, 
+  { name: "Bea Santos", prelim: 70, midterm: 65, final: 60},
+  { name: "Cid Ramos", prelim: 95, midterm: 92, final: 97},
+  {name: "Dex Alonzo:, prelim: 60, midterm:v55, final: 50},
+  {name: "Eli Tan", prelim: 78, ,midterm: 80, final: 76},
+];
+
+// Requirments 2: Promise simulating a registrar API call
+const getEnrolles = () => {
+    return new Promise((resolve, reject) => {
+        // Set to true to test error handling (Requirments 5 in video Instructions)
+        const simulateError = false;
+
+        setTimeout(() => {
+            if (simulateError) {
+                reject("Error: Unable to fetch enrollers.");
+            } else {
+                resolve(enrollers);
+            }
+        }, 1000);
+    });
+}; 
+
+
